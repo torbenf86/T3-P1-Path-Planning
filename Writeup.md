@@ -17,4 +17,4 @@ In this case the velocity is reduced to match the car in front of us.
 __________________________
 Changing the velocity is achieved by setting the variable ref_vel, which is part of the calculation of the distance between the x and y points in the lines 507 - 510.
 __________________________
-
+The path itself is generated, as suggested in the project Q & A, by using splines. In line 487, the spline s is initialized. Five anchor points are then set, using the last (x_prev,y_prev), the actual (x,y) position and three waypoints in 30,60 and 90 meters distance. The spline is used to calculate (x,y) points until a horizon of x of 30 meters. The resulting smoothed path meets the criteria concerning jerk and acceleration.
